@@ -1,5 +1,5 @@
 {
-  "name": "actions-sandbox",
+  "name": "@moreirathomas/gh-actions-sandbox",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moreirathomas/actions-sandbox.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "author": "Thomas Moreira",
   "license": "ISC",
