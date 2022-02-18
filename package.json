@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moreirathomas/actions-sandbox.git"
+    "url": "git+https://github.com/moreirathomas/gh-actions-sandbox.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -16,7 +16,7 @@
   "author": "Thomas Moreira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moreirathomas/actions-sandbox/issues"
+    "url": "https://github.com/moreirathomas/gh-actions-sandbox/issues"
   },
-  "homepage": "https://github.com/moreirathomas/actions-sandbox#readme"
+  "homepage": "https://github.com/moreirathomas/gh-actions-sandbox#readme"
 }
