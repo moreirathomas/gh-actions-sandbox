@@ -1,15 +1,12 @@
 name: Commit on dispatch
 
 on:
-  repository_dispatch:
-    types: [dispatched]
-
-# github.event = {
-#   "event_type": "dispatched",
-#   "client_payload": {
-#     "message": "foo"
-#   }
-# }
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Message to write to the log file"
+        required: true
+        default: "Update"
 
 jobs:
   commit:
@@ -27,13 +24,13 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - run: echo ${{ github.event.client_payload.message }} >> $LOGFILE
+      - run: echo ${{ inputs.message }} >> $LOGFILE
 
       - name: Commit changes
         id: commit_changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "ci: automated commit on repository_dispatch"
+          commit_message: "ci: automated commit on workflow_dispatch"
           file_pattern: $LOGFILE
 
       - name: Detect changes
